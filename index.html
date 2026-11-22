@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ma Télé</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cinzel:wght@600;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bx:#5D1828;--or:#C8A462;--bg:#ffffff;--soft:#faf6ef}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);font-family:Montserrat,Arial,sans-serif;color:var(--bx);padding:2.2vw 3vw 3vw}
+  header{display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid var(--or);padding-bottom:1.2vw;margin-bottom:1.6vw}
+  h1{font-family:Cinzel,serif;font-size:clamp(28px,3.2vw,60px);letter-spacing:.06em}
+  h1 .ar{font-family:Amiri,serif;color:var(--or);margin-left:.6em}
+  .clock{font-family:Cinzel,serif;font-size:clamp(22px,2.4vw,46px);color:var(--or)}
+  section{margin-bottom:1.6vw}
+  h2{font-family:Cinzel,serif;font-size:clamp(18px,1.7vw,32px);margin-bottom:.8vw;display:flex;align-items:center;gap:.6em}
+  h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--or),transparent)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(clamp(150px,15vw,290px),1fr));gap:1.1vw}
+  a.ch{display:flex;flex-direction:column;justify-content:center;align-items:center;text-decoration:none;
+    min-height:clamp(90px,8.5vw,165px);border-radius:18px;background:var(--soft);border:2px solid #eadfcb;
+    color:var(--bx);text-align:center;padding:.6vw;transition:transform .15s,background .15s,box-shadow .15s;outline:none}
+  a.ch .n{font-weight:700;font-size:clamp(16px,1.45vw,28px)}
+  a.ch .a{font-family:Amiri,serif;font-size:clamp(18px,1.6vw,32px);color:var(--or);direction:rtl;margin-top:.15em}
+  a.ch .t{font-size:clamp(11px,.85vw,16px);opacity:.75;margin-top:.3em}
+  a.ch:hover,a.ch:focus{background:var(--bx);border-color:var(--or);color:#fff;transform:scale(1.07);box-shadow:0 10px 30px rgba(93,24,40,.35)}
+  a.ch:focus .a,a.ch:hover .a{color:var(--or)}
+  footer{text-align:center;font-size:clamp(11px,.8vw,15px);opacity:.6;margin-top:1vw}
+</style>
+</head>
+<body>
+<header>
+  <h1>Ma Télé <span class="ar">تلفزتي</span></h1>
+  <div class="clock" id="clock"></div>
+</header>
+
+<section>
+  <h2>🇲🇦 Maroc</h2>
+  <div class="grid">
+    <a class="ch" href="https://snrtlive.ma/fr/al-aoula"><span class="n">Al Aoula</span><span class="a">الأولى</span></a>
+    <a class="ch" href="https://2m.ma"><span class="n">2M</span><span class="a">دوزيم</span><span class="t">Bouton « Live »</span></a>
+    <a class="ch" href="https://snrtlive.ma/fr/arryadia"><span class="n">Arryadia</span><span class="a">الرياضية</span></a>
+    <a class="ch" href="https://snrtlive.ma/fr/assadissa"><span class="n">Assadissa</span><span class="a">السادسة</span></a>
+    <a class="ch" href="https://snrtlive.ma/fr/tamazight"><span class="n">Tamazight</span><span class="a">الأمازيغية</span></a>
+    <a class="ch" href="https://snrtlive.ma/fr/athaqafia"><span class="n">Athaqafia</span><span class="a">الثقافية</span></a>
+    <a class="ch" href="https://snrtlive.ma/fr/laayoune"><span class="n">Laâyoune</span><span class="a">العيون</span></a>
+  </div>
+</section>
+
+<section>
+  <h2>🇩🇿 Algérie</h2>
+  <div class="grid">
+    <a class="ch" href="https://www.youtube.com/@EPTVTV1/live"><span class="n">TV1 Algérie</span><span class="a">الجزائرية الأولى</span></a>
+    <a class="ch" href="https://www.entv.dz/ar/tv2"><span class="n">Canal Algérie</span><span class="a">كنال ألجيري</span></a>
+    <a class="ch" href="https://www.entv.dz/ar/tv6"><span class="n">TV6</span><span class="a">الشبابية</span></a>
+  </div>
+</section>
+
+<section>
+  <h2>🇹🇳 Tunisie</h2>
+  <div class="grid">
+    <a class="ch" href="https://www.tunisiatv.tn/ar/live/6968cd3a5dfd283d210579ba/%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A%D9%91%D8%A9%201"><span class="n">Watania 1</span><span class="a">الوطنية 1</span></a>
+    <a class="ch" href="https://www.tunisiatv.tn/ar/live"><span class="n">Watania 2</span><span class="a">الوطنية 2</span></a>
+  </div>
+</section>
+
+<section>
+  <h2>✨ Arabe</h2>
+  <div class="grid">
+    <a class="ch" href="https://shahid.mbc.net"><span class="n">MBC · Shahid</span><span class="a">شاهد</span><span class="t">Compte gratuit</span></a>
+  </div>
+</section>
+
+<section>
+  <h2>🇫🇷 Français</h2>
+  <div class="grid">
+    <a class="ch" href="https://www.tv5mondeplus.com"><span class="n">TV5MONDE+</span><span class="t">Films · séries · jeunesse</span></a>
+    <a class="ch" href="https://www.arte.tv/fr/direct/"><span class="n">Arte</span><span class="t">Direct</span></a>
+  </div>
+</section>
+
+<footer>Flèches de la télécommande pour choisir · OK pour regarder · Retour pour revenir ici</footer>
+
+<script>
+  // Horloge
+  function tick(){var d=new Date();document.getElementById('clock').textContent=
+    String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');}
+  tick();setInterval(tick,15000);
+
+  // Navigation télécommande (flèches) : on va vers la chaîne la plus proche dans la direction
+  var items=[].slice.call(document.querySelectorAll('a.ch'));
+  var last=null;try{last=localStorage.getItem('maTeleLast');}catch(e){}
+  var start=items.filter(function(a){return a.href===last;})[0]||items[0];
+  start.focus();
+  items.forEach(function(a){a.addEventListener('click',function(){try{localStorage.setItem('maTeleLast',a.href);}catch(e){}});});
+  document.addEventListener('keydown',function(e){
+    var k=e.keyCode,dir={37:'l',38:'u',39:'r',40:'d'}[k];
+    if(!dir)return;
+    var cur=document.activeElement;if(items.indexOf(cur)<0){items[0].focus();e.preventDefault();return;}
+    var c=cur.getBoundingClientRect(),cx=c.left+c.width/2,cy=c.top+c.height/2,best=null,bd=1e9;
+    items.forEach(function(a){if(a===cur)return;var r=a.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2,dx=x-cx,dy=y-cy;
+      var ok=(dir==='l'&&dx<-5&&Math.abs(dy)<c.height/2)||(dir==='r'&&dx>5&&Math.abs(dy)<c.height/2)||(dir==='u'&&dy<-5)||(dir==='d'&&dy>5);
+      if(!ok)return;var dist=(dir==='u'||dir==='d')?Math.abs(dy)*1+Math.abs(dx)*2:Math.abs(dx);
+      if(dist<bd){bd=dist;best=a;}});
+    if(best){best.focus();best.scrollIntoView({block:'nearest',behavior:'smooth'});}
+    e.preventDefault();
+  });
+</script>
+</body>
+</html>
